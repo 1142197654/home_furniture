@@ -1,0 +1,211 @@
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+    <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active">
+                    <span title="我的桌面" data-href="welcome.html">我的桌面</span>
+                    <em></em></li>
+            </ul>
+        </div>
+        <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+
+
+        <div class="show_iframe">
+
+
+            <div class="page-container">
+                <div class="panel panel-default mt-20">
+                    <div class="panel-header">欢迎登录</div>
+                    <div class="panel-body">
+                        <p class="f-20 text-success">尊敬的<span class="c-warning">{:session('userInfo.user_name')}</span>,欢迎登录采购后台管理系统</p>
+                        <p>登录次数：{$user_num.count??''} </p>
+                        <p>当前登录IP：{$user_num.user.login_ip??''}  当前登录时间：{$user_num.user.login_time??''}</p>
+                    </div>
+                </div>
+                <div class="panel panel-default mt-20 f-l " style="width: 50%">
+                    <div class="panel-header">信息统计</div>
+                    <div class="panel-body">
+
+                        <table class="table table-border table-bordered table-bg  table-hover">
+                            <thead>
+
+                            <tr class="text-c">
+                                <th>类型</th>
+                                <th>标题</th>
+                                <th>发布人</th>
+                                <th>发布时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="text-c">
+                                <td>[版本更新]</td>
+                                <td><a href="#">增加多属性管理</a></td>
+                                <td>系统</td>
+                                <td>2019-12-27 00：00：00</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+                <div class="panel panel-default mt-20 f-r " style="width: 49%">
+                    <div class="panel-header">系统公告</div>
+                    <div class="panel-body">
+
+                        <table class="table table-border table-bordered table-bg  table-hover">
+                            <thead>
+
+                            <tr class="text-c">
+                                <th>类型</th>
+                                <th>标题</th>
+                                <th>发布人</th>
+                                <th>发布时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="text-c">
+                                <td>[版本更新]</td>
+                                <td><a href="#">增加多属性管理</a></td>
+                                <td>系统</td>
+                                <td>2019-12-27 00：00：00</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default mt-20 f-l " style="width: 50%">
+                    <div class="panel-header">采购单质检异常处理</div>
+                    <div class="panel-body">
+
+                        <table class="table table-border table-bordered table-bg  table-hover">
+                            <thead>
+
+                            <tr class="text-c">
+                                <th>类型</th>
+                                <th>标题</th>
+                                <th>发布人</th>
+                                <th>发布时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="text-c">
+                                <td>[版本更新]</td>
+                                <td><a href="#">增加多属性管理</a></td>
+                                <td>系统</td>
+                                <td>2019-12-27 00：00：00</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default mt-20 f-r " style="width: 49%">
+                    <div class="panel-header">采购单收货异常处理</div>
+                    <div class="panel-body">
+
+                        <table class="table table-border table-bordered table-bg  table-hover">
+                            <thead>
+
+                            <tr class="text-c">
+                                <th>类型</th>
+                                <th>标题</th>
+                                <th>发布人</th>
+                                <th>发布时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="text-c">
+                                <td>[版本更新]</td>
+                                <td><a href="#">增加多属性管理</a></td>
+                                <td>系统</td>
+                                <td>2019-12-27 00：00：00</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <!--  <iframe scrolling="yes" frameborder="0" src="{:url('welcome')}"></iframe>-->
+        </div>
+    </div>
+</section>
+
+<div class="contextMenu" id="Huiadminmenu">
+    <ul>
+        <li id="closethis">关闭当前 </li>
+        <li id="closeall">关闭全部 </li>
+    </ul>
+</div>
+<!--请在下方写此页面业务相关的脚本-->
+<!--<script type="text/javascript" src="__STATIC__/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>-->
+<script type="text/javascript">
+    /*$(function(){
+        $("#min_title_list li").contextMenu('Huiadminmenu', {
+         bindings: {
+         'closethis': function(t) {
+         console.log(t);
+         if(t.find("i")){
+         t.find("i").trigger("click");
+         }
+         },
+         'closeall': function(t) {
+         alert('Trigger was '+t.id+'\nAction was Email');
+         },
+         }
+         });
+    });*/
+    /*个人信息*/
+    function myselfinfo(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+
+    /*资讯-添加*/
+    function article_add(title,url){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    /*图片-添加*/
+    function picture_add(title,url){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    /*产品-添加*/
+    function product_add(title,url){
+        var index = layer.open({
+            type: 2,
+            title: title,
+            content: url
+        });
+        layer.full(index);
+    }
+    /*用户-添加*/
+    function member_add(title,url,w,h){
+        layer_show(title,url,w,h);
+    }
+
+
+</script>
